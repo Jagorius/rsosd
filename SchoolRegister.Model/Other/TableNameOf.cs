@@ -5,3 +5,4 @@ namespace SchoolRegister.Model.Other
         public const string PersonSchema = "PersonSchemas";
     }
 }
+//
