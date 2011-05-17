@@ -8,9 +8,9 @@ namespace SchoolRegister.Model.Objects
     using SchoolRegister.Model.Other;
     using SchoolRegister.Model.Repositories;
 
-    public class PersonsCollection : PersonsCollection<Person>
+    public class AzureAbstractionCollection : AzureAbstractionCollection<Person>
     {
-        public PersonsCollection(SchoolRegisterTableSeviceContext context)
+        public AzureAbstractionCollection(AzureTablesSource context)
             : base(context)
         {
             

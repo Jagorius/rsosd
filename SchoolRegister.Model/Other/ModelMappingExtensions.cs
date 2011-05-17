@@ -5,7 +5,9 @@
     using AutoMapper;
 
     using SchoolRegister.Model.Abstract;
-
+    /// <summary>
+    /// Mniej kodu przy mapowaniu automapperem
+    /// </summary>
     public static class ModelMappingExtensions
     {
         public static TDestination MapInto<TDestination>(this ISchema source)

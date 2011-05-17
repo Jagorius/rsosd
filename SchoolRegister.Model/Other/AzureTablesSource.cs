@@ -7,15 +7,16 @@ namespace SchoolRegister.Model.Other
     using Microsoft.WindowsAzure;
     using Microsoft.WindowsAzure.StorageClient;
 
+    using SchoolRegister.Model.Abstract;
     using SchoolRegister.Model.Entities;
 
     #endregion
 
-    public class SchoolRegisterTableSeviceContext : TableServiceContext
+    public class AzureTablesSource : TableServiceContext, IDataBaseSource
     {
         
 
-        public SchoolRegisterTableSeviceContext(string baseAddress, StorageCredentials credentials)
+        public AzureTablesSource(string baseAddress, StorageCredentials credentials)
             : base(baseAddress, credentials)
         {
         }

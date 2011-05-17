@@ -12,25 +12,29 @@ namespace SchoolRegister.Model.Objects
 
     #endregion
 
-    public abstract class PersonsCollection<T> : IPersonsCollection<T>
+    /// <summary>
+    /// Ta klasa potem zniknie, bo Context bêdzie gdzie w singletonie
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public abstract class AzureAbstractionCollection<T> : IPersonsCollection<T>
     {
-        private readonly SchoolRegisterTableSeviceContext _context;
+        private readonly AzureTablesSource _context;
 
         private readonly IList<T> _objectList;
 
-        protected PersonsCollection(SchoolRegisterTableSeviceContext context)
+        protected AzureAbstractionCollection(AzureTablesSource context)
         {
             _context = context;
             _objectList = new List<T>();
         }
 
-        protected PersonsCollection(SchoolRegisterTableSeviceContext context, IList<T> list)
+        protected AzureAbstractionCollection(AzureTablesSource context, IList<T> list)
         {
             _context = context;
             _objectList = list;
         }
 
-        protected SchoolRegisterTableSeviceContext Context
+        protected AzureTablesSource Context
         {
             get
             {
@@ -84,7 +88,7 @@ namespace SchoolRegister.Model.Objects
 //    public static class LinqExtensions
 //    {
 //        public static TableMappingObjectCollection<T> ToObjectCollection<T>(
-//            this IEnumerable<T> enumerable, SchoolRegisterTableSeviceContext context)
+//            this IEnumerable<T> enumerable, AzureTablesSource context)
 //        {
 //            return new TableMappingObjectCollection<T>(context, enumerable.ToList());
 //        }

@@ -14,11 +14,14 @@
 
     #endregion
 
+    /// <summary>
+    /// Z tej klasy ustawienia azure pójdą gdzie indziej.
+    /// </summary>
     public class UsersRepository : IUsersRepository
     {
         private static readonly CloudStorageAccount Account;
 
-        private readonly SchoolRegisterTableSeviceContext _context;
+        private readonly AzureTablesSource _context;
 
         static UsersRepository()
         {
@@ -29,16 +32,16 @@
         {
             string uri = Account.TableEndpoint.AbsoluteUri;
             StorageCredentials credentials = Account.Credentials;
-            _context = new SchoolRegisterTableSeviceContext(uri, credentials)
+            _context = new AzureTablesSource(uri, credentials)
             {
                 RetryPolicy = RetryPolicies.Retry(3, TimeSpan.FromSeconds(1)), 
                 IgnoreResourceNotFoundException = true, 
             };
 
-            CloudTableClient.CreateTablesFromModel(typeof(SchoolRegisterTableSeviceContext), uri, credentials);
+            CloudTableClient.CreateTablesFromModel(typeof(AzureTablesSource), uri, credentials);
         }
 
-        public SchoolRegisterTableSeviceContext ServiceContext
+        public AzureTablesSource ServiceContext
         {
             get
             {
@@ -53,7 +56,7 @@
             get
             {
                 
-                return new PersonsCollection(_context);
+                return new AzureAbstractionCollection(_context);
             }
         }
 

@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IDataBaseSource.cs" />
     <Compile Include="Abstract\ISchema.cs" />
     <Compile Include="Abstract\IPersonsCollection.cs" />
     <Compile Include="Objects\Account.cs" />
@@ -60,7 +61,7 @@
     <Compile Include="Objects\PersonsCollection.cs" />
     <Compile Include="Objects\TableMappingObjectCollection.cs" />
     <Compile Include="Other\ModelMappingExtensions.cs" />
-    <Compile Include="Other\SchoolRegisterTableSeviceContext.cs" />
+    <Compile Include="Other\AzureTablesSource.cs" />
     <Compile Include="Other\TableNameOf.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
     <Compile Include="Entities\PersonSchema.cs" />
