@@ -1,0 +1,31 @@
+﻿@using SchoolRegister.Web.Models
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+
+</head>
+<body>
+
+     <header>
+        @{ Html.RenderAction("MainMenu","Home"); }
+    </header>
+
+
+
+        @RenderBody()
+    
+
+    <footer>
+        <h1>Rozproszone Systemy Operacyjne</h1>
+        <p>Authors: Piotr Trzpil, Maciej Grabowski, Piotr Pękalski, Dariusz Jagodziński, Hubert Cieślicki, Bartosz Jabłoński </p>
+    </footer>
+
+
+</body>
+</html>

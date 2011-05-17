@@ -1,0 +1,22 @@
+﻿@using SchoolRegister.Web.Controllers
+
+@model LogOnViewModel
+
+@{
+    ViewBag.Title = "LogOn";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h2>LogOn</h2>
+ 
+    <p>Please log in:</p> 
+    @{Html.EnableClientValidation();}
+
+
+    @using(Html.BeginForm()) 
+    {  
+        @Html.ValidationSummary(true) 
+        @Html.EditorForModel()
+        <p><input type="submit" value="Log in" /></p> 
+        
+    }

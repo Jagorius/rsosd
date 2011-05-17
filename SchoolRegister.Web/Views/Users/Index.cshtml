@@ -1,0 +1,31 @@
+﻿@using SchoolRegister.Model.Objects
+
+@model IEnumerable<Person>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h2>Lista osób: </h2>
+
+
+@foreach (Person person in Model)
+{
+    using(Html.BeginForm("Remove", "Users"))
+    {
+        @person.Surname  @person.Name  @person.Pesel
+        
+        @Html.Hidden("Pesel", person.Pesel)
+        
+        <input type="submit" value="Usuń" />
+    }
+   
+}
+
+
+
+
+@Html.ActionLink("Add person", "Add")

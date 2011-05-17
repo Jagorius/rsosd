@@ -1,0 +1,12 @@
+﻿@using SchoolRegister.Web.Models
+
+@model IEnumerable<MenuLink>
+
+@foreach (MenuLink link in Model)
+{
+    @Html.RouteLink(link.Text, link.RouteValues, 
+    new Dictionary<string, object> 
+    { 
+        { "class", link.IsSelected ? "selected" : null} 
+    })
+}

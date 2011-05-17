@@ -1,0 +1,123 @@
+body
+{
+    font-size: 100%;
+    font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+header a
+{
+	font: bold 1.1em "Arial Narrow" , "Franklin Gothic Medium" ,Arial;
+	display: block;
+	text-decoration: none;
+	padding: .6em;
+	color: Black;
+	border-bottom: 1px solid silver;
+	text-align: center;
+	padding: 4px;
+	width: 120px;
+	color: #FFFFFF;
+	background-color: #98bf21;
+	float: right;
+} 
+header a.selected 
+{ 
+	background-color: #99FF00; 
+	color: White; 
+} 
+header a:hover 
+{ 
+	background-color: #CCC; 
+} 
+header a.selected:hover 
+{ 
+	background-color: #666; 
+} 
+
+footer
+{
+	font-size: 50%;
+	font-family: Verdana, Tahoma, Arial, "Helvetica Neue" , Helvetica, Sans-Serif;
+	color: #232323;
+	background-color: #9CCDFF;
+	
+	padding: 10px;
+	text-align: center;
+	border-top: 1px dotted #8A8575;
+	border-bottom: 1px dotted #8A8575;
+}

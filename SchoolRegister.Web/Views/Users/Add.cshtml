@@ -1,0 +1,16 @@
+﻿@using SchoolRegister.Model.Objects
+@model Person
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h2>Add Person:</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.EditorForModel()
+        <input type="submit" value="Akceptuj" />  
+    }
